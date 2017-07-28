@@ -6,20 +6,6 @@ using System.Threading.Tasks;
 
 namespace A4
 {
-    public interface IHasMoons
-    {
-        bool HasMoons();
-    }
-
-    public interface IHasRings
-    {
-        bool HasRings();
-    }
-
-    public interface IHabitable
-    {
-        bool Habitable();
-    }
 
     class GiantPlanet : Planet, IHasMoons,IHasRings
     {
