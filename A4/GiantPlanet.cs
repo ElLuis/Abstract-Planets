@@ -6,17 +6,22 @@ using System.Threading.Tasks;
 
 namespace A4
 {
-    public interface HasMoons
+    public interface IHasMoons
     {
-        bool CountMoon();
+        bool HasMoons();
     }
 
-    public interface HasRings
+    public interface IHasRings
     {
-        bool CountRing();
+        bool HasRings();
     }
 
-    class GiantPlanet : Planet, HasMoons,HasRings
+    public interface IHabitable
+    {
+        bool Habitable();
+    }
+
+    class GiantPlanet : Planet, IHasMoons,IHasRings
     {
         private string _type; //either Gas or Ice
         public string Type { get { return _type; } set { _type = value; } }
@@ -26,7 +31,7 @@ namespace A4
             _type = type;
         }
 
-        public bool CountMoon()
+        public bool HasMoons()
         {
             if (MoonCount > 0)
                 return true;
@@ -34,7 +39,7 @@ namespace A4
                 return false;
         }
 
-        public bool CountRing()
+        public bool HasRings()
         {
             if (RingCount > 0)
                 return true;
