@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace A4
 {
+    //Luis Sanchez - Assignment 4 - 28/07/2017
+    //Abstract class
     abstract class Planet
     {
         private double _diameter;
