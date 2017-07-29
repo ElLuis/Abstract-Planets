@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace A4
 {
-
+    //Luis Sanchez - Assignment 4 - 28/07/2017
+    //300796405
+    //Inheritance - Ch.10 | worth 10%
+    //This class is the parent class where the different types of planets derive from.
     abstract class Planet
     {
         private double _diameter;
@@ -98,7 +101,7 @@ namespace A4
 
         public override string ToString()
         {
-            return string.Format("{0} - diameter = {1} | mass = {2}", Name, Diameter, Mass);
+            return string.Format("{0} - diameter = {1} | mass = {2} ", Name, Diameter, Mass);
         }
     }
 }

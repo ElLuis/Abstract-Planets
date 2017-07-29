@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace A4
 {
+    //Luis Sanchez - Assignment 4 - 28/07/2017
+    //300796405
+    //Inheritance - Ch.10 | worth 10%
+    //This class is a subclass of Planet and represents the biggest planets. It includes two types of planets
+    //"Ice" and "Gas"
 
     class GiantPlanet : Planet, IHasMoons,IHasRings
     {
@@ -15,6 +20,11 @@ namespace A4
         public GiantPlanet(string name, double diameter, double mass, string type) : base(name, diameter, mass)
         {
             _type = type;
+        }
+
+        public override string ToString() //A more suitable ToString() method for this subclass
+        {
+            return string.Format("{0} - diameter = {1} | mass = {2} | type: {3}", Name, Diameter, Mass,Type);
         }
 
         public bool HasMoons()

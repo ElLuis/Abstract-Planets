@@ -11,13 +11,22 @@ namespace A4
         //Luis Sanchez - Assignment 4 - 28/07/2017
         //300796405
         //Inheritance - Ch.10 | worth 10%
+        //Main class where objects are instantiated and methods are used
+        static void WaitForAnyKey()
+        {
+            Console.ReadKey();
+        }
         static void Main(string[] args)
         {
+            
             GiantPlanet giantPlanet = new GiantPlanet("Saturn", 116.464, 5.6836, "Ice");
             Console.WriteLine(giantPlanet);
-            TerrestrialPlanet terrestrialPlanet = new TerrestrialPlanet("Earth", 12.742, 5.972,true);
+            TerrestrialPlanet terrestrialPlanet = new TerrestrialPlanet("Earth", 12.742, 5.972, true);
             Console.WriteLine(terrestrialPlanet);
-            Console.ReadLine();
+            Program.WaitForAnyKey();
+
         }
     }
 }
+    
+
